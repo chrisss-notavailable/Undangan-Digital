@@ -41,7 +41,9 @@ section {
 #section-five,
 #section-six,
 #section-seven,
-#section-eight {
+#section-eight,
+#section-nine,
+#section-countdown {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +59,9 @@ section {
 #section-five,
 #section-six,
 #section-seven,
-#section-eight {
+#section-eight,
+#section-nine,
+#section-countdown {
     background: linear-gradient(160deg, #0d0d0d 0%, #1a1a1a 50%, #0f0f0f 100%);
 }
 
@@ -70,7 +74,9 @@ section {
 #section-four,
 #section-six,
 #section-seven,
-#section-eight {
+#section-eight,
+#section-nine,
+#section-countdown {
     flex-direction: column;
     padding: 40px 20px;
 }
@@ -83,7 +89,11 @@ section {
 #section-seven::before,
 #section-seven::after,
 #section-eight::before,
-#section-eight::after {
+#section-eight::after,
+#section-nine::before,
+#section-nine::after,
+#section-countdown::before,
+#section-countdown::after {
     content: '';
     position: absolute;
     border-color: rgba(255, 255, 255, 0.06);
@@ -94,7 +104,10 @@ section {
 #invitation::before,
 #section-six::before,
 #section-seven::before,
-#section-eight::before {
+#section-eight::before,
+#section-nine::before,
+#section-nine::before,
+#section-countdown::before {
     top: 32px;
     left: 32px;
     border-width: 1px 0 0 1px;
@@ -103,7 +116,9 @@ section {
 #invitation::after,
 #section-six::after,
 #section-seven::after,
-#section-eight::after {
+#section-eight::after,
+#section-nine::after,
+#section-countdown::after {
     bottom: 32px;
     right: 32px;
     border-width: 0 1px 1px 0;
@@ -120,7 +135,11 @@ section {
 #section-seven::before,
 #section-seven::after,
 #section-eight::before,
-#section-eight::after {
+#section-eight::after,
+#section-nine::before,
+#section-nine::after,
+#section-countdown::before,
+#section-countdown::after {
     width: 160px;
     height: 160px;
 }
@@ -146,6 +165,7 @@ section {
     margin-bottom: 18px;
 }
 
+.countdown-title,
 .rsvp-title,
 .wishes-title,
 .closing-title {
@@ -155,6 +175,10 @@ section {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.countdown-title {
+    margin-bottom: 20px;
 }
 
 .rsvp-title {
@@ -408,6 +432,19 @@ section {
     max-width: 1350px;
 }
 
+.details-img-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.details-img-link:hover .details-img {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
 .details-img {
     max-width: 100%;
     max-height: 72vh;
@@ -417,6 +454,8 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.18);
     margin: 0 auto;
     display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -458,6 +497,72 @@ section {
     line-height: 2;
     letter-spacing: 0.03em;
     margin: 0;
+}
+
+/* ##### SECTION COUNTDOWN ( UNTIL FOREVER ) ###### */
+.countdown-section {
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+.countdown-quote p {
+    font-family: 'Lugrasimo', serif;
+    font-style: italic;
+    font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 2;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(14px, 3vw, 36px);
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(80px, 18vw, 140px);
+    padding: clamp(18px, 2.5vw, 30px) clamp(14px, 2vw, 24px);
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 14px 40px rgba(255, 255, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.countdown-num {
+    font-family: 'Lugrasimo', serif;
+    font-size: clamp(2.2rem, 4.8vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: #ffffff;
+    letter-spacing: 0.06em;
+    text-shadow: 0 2px 20px rgba(255, 255, 255, 0.35);
+}
+
+.countdown-label {
+    font-family: 'Lugrasimo', serif;
+    font-size: clamp(0.72rem, 1.1vw, 0.92rem);
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    margin-top: 12px;
 }
 
 /* ##### SECTION 5 ( FRAGMENTS OF FOREVER - PART 1) ###### */
