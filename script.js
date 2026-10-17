@@ -49,7 +49,8 @@ if (weddingAudio) {
 /* ##### TOMBOL BUKA UNDANGAN ##### */
 document.getElementById('open-invitation-btn').addEventListener('click', function () {
     playBgAudio();
-    document.getElementById('invitation').scrollIntoView({ behavior: 'smooth' });
+    const targetSection = document.getElementById('section-two') || document.getElementById('invitation');
+    if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
 });
 
 /* ##### NAVIGASI TOMBOL NAVBAR ##### */
@@ -68,7 +69,7 @@ navBtns.forEach(btn => {
 
 /* #####  NAVBAR ##### */
 const navbar = document.getElementById('main-navbar');
-const landingSec = document.getElementById('landing');
+const landingSec = document.getElementById('section-one') || document.getElementById('landing');
 
 function updateNavbarVisibility() {
     if (!landingSec || !navbar) return;
@@ -85,15 +86,15 @@ document.body.addEventListener('scroll', updateNavbarVisibility, { passive: true
 
 
 const sectionNavMap = [
-    { id: 'invitation', navTarget: 'invitation' },
-    { id: 'section-next', navTarget: 'section-next' },
+    { id: 'section-two', navTarget: 'section-two' },
     { id: 'section-three', navTarget: 'section-three' },
     { id: 'section-four', navTarget: 'section-four' },
-    { id: 'section-five', navTarget: 'section-four' },
+    { id: 'section-five', navTarget: 'section-five' },
     { id: 'section-six', navTarget: 'section-six' },
-    { id: 'section-seven', navTarget: 'section-seven' },
+    { id: 'section-seven', navTarget: 'section-six' },
     { id: 'section-eight', navTarget: 'section-eight' },
-    { id: 'section-nine', navTarget: 'section-nine' }
+    { id: 'section-nine', navTarget: 'section-nine' },
+    { id: 'section-ten', navTarget: 'section-ten' }
 ];
 
 const navObserver = new IntersectionObserver((entries) => {
