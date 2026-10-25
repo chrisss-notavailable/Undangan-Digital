@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prewedding</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="opensource/sakura-petal-rain/sakura.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="wedding-audio" autoplay loop preload="auto">
+        <source src="assets/audio/aud1.mp3" type="audio/mpeg">
+        <source src="assets/audio/aud1.m4a" type="audio/mp4">
+    </audio>
+
+    <!-- Sakura Petal Rain Container (Activated after Open Invitation) -->
+    <div id="sakura-container" class="sakura-container" aria-hidden="true"></div>
+
+    <nav id="main-navbar" class="navbr-web">
+        <div class="nav-container">
+            <a href="#section-two" class="nav-btn" data-target="section-two">VERSES OF THE HEART</a>
+            <a href="#section-three" class="nav-btn" data-target="section-three">THE SOULS</a>
+            <a href="#section-four" class="nav-btn" data-target="section-four">THE DAY WE BECOME</a>
+            <a href="#section-five" class="nav-btn" data-target="section-five">UNTIL FOREVER</a>
+            <a href="#section-six" class="nav-btn" data-target="section-six">FRAGMENTS OF FOREVER</a>
+            <a href="#section-eight" class="nav-btn" data-target="section-eight">KINDLY RESPOND</a>
+            <a href="#section-nine" class="nav-btn" data-target="section-nine">LETTERS TO ETERNITY</a>
+            <a href="#section-ten" class="nav-btn" data-target="section-ten">AN ETERNAL EPILOGUE</a>
+        </div>
+    </nav>
+
+    <!-- ##### SECTION 1 ( OPENING) ###### -->
+    <section id="section-one">
+        <video id="landing-video" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="assets/video/awal.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <div id="landing-overlay" class="position-absolute start-50 translate-middle-x text-center pe-none">
+            <h1>THE BEGINNING OF FOREVER</h1>
+        </div>
+
+        <div id="landing-btn-wrapper" class="position-absolute start-50 translate-middle-x text-center">
+            <a class="btn-invitation" id="open-invitation-btn">Open Invitation</a>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 2 ( VERSES OF THE HEART) ###### -->
+    <section id="section-two">
+        <div class="invitation-content">
+            <h2>The Beginning of Forever</h2>
+            <div class="poem">
+                <div class="puisi">
+                    Perhaps love was never about finding someone perfect,<br>
+                    but finding someone<br>
+                    with whom every imperfection feels beautiful.
+                </div>
+                <div class="puisi">
+                    Today, I choose you.<br>
+                    Tomorrow, I will choose you again.<br>
+                    And for all the days that follow,<br>
+                    I will keep choosing you.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 3 ( THE SOULS) ###### -->
+    <section id="section-three">
+        <div class="wedding-announcement">
+            <p class="wedding-detail">THE WEDDING OF</p>
+            <h2 class="couple-name">LUTFI HALIMAWAN</h2>
+            <div class="space">&</div>
+            <h2 class="couple-name">DEA AULIA</h2>
+            <div class="wedding-quote">
+                <p>
+                    Together with our families,<br>
+                    we invite you to celebrate our special day.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 4 ( THE DAY WE BECOME) ###### -->
+    <section id="section-four">
+        <div class="detail d-flex flex-column align-items-center">
+            <h2 class="details-header">WEDDING DETAILS</h2>
+            <div class="details-row">
+                <div class="details-col-media">
+                    <a href="https://maps.google.com/?q=AYANA+Resort+Bali" target="_blank" rel="noopener noreferrer"
+                        class="details-img-link" title="Buka Lokasi di Google Maps">
+                        <img src="assets/gambar/lokasi.jpeg" alt="Lokasi Wedding - AYANA Resort Bali"
+                            class="details-img">
+                        <span class="maps-hint">Buka Lokasi di Google Maps ↗</span>
+                    </a>
+                </div>
+                <div class="details-col-info">
+                    <div class="celebration-info">
+                        <p class="celebration-subtitle">THE CELEBRATION</p>
+                        <h3 class="celebration-date">18 · 02 · 2027</h3>
+                        <h4 class="celebration-place">AYANA RESORT<br>BALI</h4>
+                        <div class="celebration-desc">
+                            <p>
+                                An intimate celebration of love,<br>
+                                an unforgettable beginning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 5 ( UNTIL FOREVER - COUNTDOWN) ###### -->
+    <section id="section-five">
+        <div
+            class="container text-center text-white d-flex flex-column align-items-center justify-content-center position-relative z-2 countdown-section">
+            <h2 class="countdown-title">UNTIL FOREVER</h2>
+            <div class="countdown-quote mb-4">
+                <p>Counting down every moment until we say forever.</p>
+            </div>
+            <div class="countdown-wrapper">
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-days">00</span>
+                    <span class="countdown-label">DAYS</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-hours">00</span>
+                    <span class="countdown-label">HOURS</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-minutes">00</span>
+                    <span class="countdown-label">MINUTES</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-seconds">00</span>
+                    <span class="countdown-label">SECONDS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 6 ( FRAGMENTS OF FOREVER - PART 1) ###### -->
+    <section id="section-six">
+        <div class="container text-center gallery">
+            <h2 class="judul-galeri">OUR MOMENTS</h2>
+            <div class="quote-gallery mb-4">
+                <p class="mb-2">
+                    A collection of moments,<br>
+                    a lifetime of memories.
+                </p>
+                <p class="mb-0 fst-italic">
+                    Every photograph holds a story,<br>
+                    and every story leads me back to you.
+                </p>
+            </div>
+
+            <div class="moments-gallery">
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/1.jpeg" alt="Moment 1" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/2.jpeg" alt="Moment 2" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/3.jpeg" alt="Moment 3" class="moment-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 7 ( FRAGMENTS OF FOREVER - PART 2) ###### -->
+    <section id="section-seven">
+        <div class="container text-center grid-photo">
+            <div class="grid-photo-6">
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/4.jpeg" alt="Moment 4" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/5.jpeg" alt="Moment 5" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/6.jpeg" alt="Moment 6" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/7.jpeg" alt="Moment 7" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/8.jpeg" alt="Moment 8" class="moment-img">
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="ratio ratio-1x1 frame-efek">
+                        <img src="assets/gambar/9.jpeg" alt="Moment 9" class="moment-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 8 ( KINDLY RESPOND) ###### -->
+    <section id="section-eight">
+        <div
+            class="container text-center text-white d-flex flex-column align-items-center justify-content-center position-relative z-2 rsvp">
+            <h2 class="rsvp-title">THE HONOUR OF YOUR PRESENCE</h2>
+
+            <div class="rsvp-quote">
+                <p>
+                    As we begin our forever,<br>
+                    it would mean the world to us<br>
+                    to have you share in the joy of our union.
+                </p>
+                <p class="mb-0">
+                    Kindly grace us with your presence<br>
+                    and let us know if you will be joining us<br>
+                    for this unforgettable celebration of love.
+                </p>
+            </div>
+
+            <div class="rsvp-date-venue">
+                <h3 class="rsvp-date">18 · 02 · 2027</h3>
+                <h4 class="rsvp-loc">AYANA RESORT BALI</h4>
+            </div>
+
+            <a href="https://forms.gle/qaNu6wpbsBCTw6eRA" target="_blank" rel="noopener noreferrer" class="btn-rsvp"
+                id="btn-confirm-presence">CONFIRM YOUR PRESENCE</a>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 9 ( LETTERS TO ETERNITY) ###### -->
+    <section id="section-nine">
+        <div
+            class="container text-center text-white d-flex flex-column align-items-center justify-content-center position-relative z-2 wishes">
+            <h2 class="wishes-title">A NOTE FOR OUR FOREVER</h2>
+
+            <div class="wishes-quote">
+                <p>
+                    Every kind word becomes a memory,<br>
+                    every heartfelt wish a treasure.
+                </p>
+                <p class="mb-0">
+                    As we begin this beautiful chapter,<br>
+                    we invite you to leave us a little note<br>
+                    that we will cherish for a lifetime.
+                </p>
+            </div>
+
+            <a href="https://forms.gle/qaNu6wpbsBCTw6eRA" target="_blank" rel="noopener noreferrer"
+                class="btn-wishes" id="btn-leave-wish">LEAVE A WISH ↗</a>
+        </div>
+    </section>
+
+    <!-- ##### SECTION 10 ( AN ETERNAL EPILOGUE) ###### -->
+    <section id="section-ten">
+        <div
+            class="container text-center text-white d-flex flex-column align-items-center justify-content-center position-relative z-2 closing">
+            <h2 class="closing-title">AND THE STORY CONTINUES</h2>
+
+            <div class="closing-quote">
+                <p>
+                    The final frame of one beautiful chapter,<br>
+                    the opening scene of a thousand more.
+                </p>
+                <p>
+                    No grand ending,<br>
+                    no final goodbye.
+                </p>
+                <p class="mb-0">
+                    Just you, me,<br>
+                    and a lifetime yet to unfold.
+                </p>
+            </div>
+
+            <div class="closing-sign">
+                <p class="closing-sign-title">WITH LOVE ,</p>
+                <h3 class="closing-names">LUTFI & DEA</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="opensource/sakura-petal-rain/sakura.min.js"></script>
+    <script src="petal-rain.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
